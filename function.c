@@ -102,7 +102,7 @@ void insert_bucket(Hash* h, void* data) {
 		if (!isBucket) {
 			b->hashcode = hashcode;
 			for (Bucket* tmp = h->first; tmp != NULL; tmp = tmp->next) {
-				if (tmp->hashcode > b->hashcode) {						//utworzenie bucketa pomiedzy innymi rosn¹co
+				if (tmp->hashcode > b->hashcode) {						//utworzenie bucketa pomiedzy innymi rosnÄ…co
 					b->prev = tmp->prev;
 					if (tmp->prev != NULL)
 						tmp->prev->next = b;
@@ -173,7 +173,7 @@ void delete_bucket(Hash* h, int hashcode) {
 			}
 		}
 		if (bToDel != NULL) {
-			delete_nodes(bToDel);			//usuniêcie nodów z bucketa
+			delete_nodes(bToDel);			//usuniÄ™cie nodÃ³w z bucketa
 			bToDel->first = NULL;
 			bToDel->hashcode = NULL;
 			if(bToDel->next != NULL)
